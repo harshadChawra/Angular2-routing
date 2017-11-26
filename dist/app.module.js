@@ -11,12 +11,11 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
-var about_component_1 = require("./about/about.component");
 var contact_component_1 = require("./contact/contact.component");
 var app_routing_1 = require("./app.routing");
 var not_found_component_1 = require("./not-found/not-found.component");
-var about_user_component_1 = require("./about/about-user.component");
 var user_service_1 = require("./shared/services/user.service");
+var about_resolve_service_1 = require("./about/about-resolve.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -30,13 +29,12 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
-                about_component_1.AboutComponent,
                 contact_component_1.ContactComponent,
                 not_found_component_1.NotFoundComponent,
-                about_user_component_1.AboutUserComponent
             ],
             providers: [
-                user_service_1.UserService
+                user_service_1.UserService,
+                about_resolve_service_1.AboutUsersResolve
             ],
             bootstrap: [app_component_1.AppComponent]
         })

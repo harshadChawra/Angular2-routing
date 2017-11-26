@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { User } from "../shared/models/user";
-import { UserService } from "../shared/services/user.service";
-import { Router } from "@angular/router/src/router";
 
 @Component({
     styles:[`
@@ -27,16 +25,10 @@ export class AboutUserComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private service: UserService,
         private router: Router
     ){}
     ngOnInit(){
-        //grab the current username
-        let username = this.route.snapshot.params['username'];
-        
-        this.service.getUser(username).then(user => this.user=user);
-
-        console.log(username);
+        this.route.data.forEach((data: {user: User}) => this.user = data.user);
     }
 
     goBack(){

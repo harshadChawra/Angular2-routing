@@ -8,12 +8,14 @@ import { appRouting } from './app.routing';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserService } from './shared/services/user.service';
 import { AboutUsersResolve } from './about/about-resolve.service';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   imports: [ 
     BrowserModule,
     FormsModule,
-    appRouting
+    appRouting,
+    DashboardModule
   ],
   declarations: [ 
     AppComponent,

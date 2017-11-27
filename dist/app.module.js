@@ -16,6 +16,7 @@ var app_routing_1 = require("./app.routing");
 var not_found_component_1 = require("./not-found/not-found.component");
 var user_service_1 = require("./shared/services/user.service");
 var about_resolve_service_1 = require("./about/about-resolve.service");
+var dashboard_module_1 = require("./dashboard/dashboard.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -24,7 +25,8 @@ var AppModule = /** @class */ (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                app_routing_1.appRouting
+                app_routing_1.appRouting,
+                dashboard_module_1.DashboardModule
             ],
             declarations: [
                 app_component_1.AppComponent,

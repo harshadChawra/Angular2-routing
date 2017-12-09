@@ -14,9 +14,9 @@ var home_component_1 = require("./home/home.component");
 var contact_component_1 = require("./contact/contact.component");
 var app_routing_1 = require("./app.routing");
 var not_found_component_1 = require("./not-found/not-found.component");
-var user_service_1 = require("./shared/services/user.service");
-var about_resolve_service_1 = require("./about/about-resolve.service");
 var dashboard_module_1 = require("./dashboard/dashboard.module");
+var auth_guard_service_1 = require("./shared/guards/auth-guard.service");
+var can_deactivate_guard_service_1 = require("./shared/guards/can-deactivate-guard.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -35,8 +35,10 @@ var AppModule = /** @class */ (function () {
                 not_found_component_1.NotFoundComponent,
             ],
             providers: [
-                user_service_1.UserService,
-                about_resolve_service_1.AboutUsersResolve
+                //UserService,
+                //AboutUsersResolve,
+                auth_guard_service_1.AuthGuard,
+                can_deactivate_guard_service_1.CanDeactivateGuard
             ],
             bootstrap: [app_component_1.AppComponent]
         })

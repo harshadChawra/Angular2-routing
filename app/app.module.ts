@@ -9,6 +9,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UserService } from './shared/services/user.service';
 import { AboutUsersResolve } from './about/about-resolve.service';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { AuthGuard } from './shared/guards/auth-guard.service';
+import { CanDeactivateGuard } from './shared/guards/can-deactivate-guard.service';
 
 @NgModule({
   imports: [ 
@@ -24,8 +26,10 @@ import { DashboardModule } from './dashboard/dashboard.module';
     NotFoundComponent,
   ],
   providers: [
-    UserService,
-    AboutUsersResolve
+    //UserService,
+    //AboutUsersResolve,
+    AuthGuard,
+    CanDeactivateGuard
   ],
   bootstrap: [ AppComponent ]
 })

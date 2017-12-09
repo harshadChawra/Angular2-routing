@@ -12,7 +12,7 @@ var DashboardComponent = /** @class */ (function () {
     }
     DashboardComponent = __decorate([
         core_1.Component({
-            template: "\n        i am the dashboard section\n    "
+            template: "\n        <div class=\"jumbotron text-center\">\n            <h1>Welcome to the Dashboard</h1>\n\n            <a routerLink=\"/dashboard/users\" class=\"btn btn-lg btn-danger\">\n                Manage Users\n            </a>\n        </div>\n    "
         })
     ], DashboardComponent);
     return DashboardComponent;
